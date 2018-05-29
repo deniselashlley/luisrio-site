@@ -1,0 +1,123 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    color: $abbey;
+    font-family: $bebas-neue-regular;
+    font-weight: normal;
+}
+
+h2 {
+    @include font-size(2.9); 
+    font-family: $bebas-neue-thin;
+    font-weight: normal;
+
+    @include respond-to(medium-screen) {
+        @include font-size(4.2);  
+    }
+}
+
+h3 {
+    color: $silk;
+    text-transform: uppercase;
+    font-weight: normal;
+    @include font-size(1.8); 
+
+    @include respond-to(medium-screen) {
+
+    }
+}
+
+a, a:visited {
+    color: $storm-grey;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+main {
+    margin: 1.25rem;    
+}
+
+/* Header */
+.site-banner {
+    background: url($image-path + 'flower_2.jpg') center top no-repeat;
+    background-size: cover;
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    min-height: 800px;
+    margin-bottom: 1.25rem;
+
+    .home-link {
+        background: url($image-path + 'logo.svg') center/cover no-repeat;
+        display: block;
+        margin: 30px auto;
+        width: 300px;
+        height: 300px;
+
+        .visually-hidden {
+            @include visuallyhidden;
+        }
+    }
+}
+
+/* sections */
+.section-block--grey {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: $black-haze;
+} 
+
+.section-block {
+    text-align: center;
+}
+
+.contact {
+    margin-top: -20rem;
+    position: relative;
+    z-index: 10;
+    a {
+        @include font-size(2.8);    
+    }
+}
+
+.footer {
+    .social-network {
+        float:left;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            &:hover {
+                .icon-fb {
+                    background: url($image-path + 'facebook_hover.svg') no-repeat;
+                }
+                
+                .icon-instagram {
+                    background: url($image-path + 'instagram_hover.svg') no-repeat;
+                }
+            }
+        }
+
+        .icon {
+            width:30px;
+            height:30px;
+            display:block;
+        }
+
+        .icon-fb {
+            background: url($image-path + 'facebook.svg') no-repeat;
+        }
+        
+        .icon-instagram {
+            background: url($image-path + 'instagram.svg') no-repeat;
+        }
+    }
+}
