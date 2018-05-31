@@ -12,8 +12,8 @@ const Layout = ({ children, data }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Luis Rio - nature specialist' },
+        { name: 'keywords', content: 'Luis Rio, jardim, rega, manutenção, piscinas' },
       ]}
     />
     <main role="main">
