@@ -1,9 +1,5 @@
 import React, { Component } from "react"
 import * as PropTypes from "prop-types"
-import Typography from "typography"
-import { TypographyStyle } from "react-typography"
-
-const typography = new Typography()
 
 let stylesStr
 const buildDirectory = process.env.GATSBY_BUILD_DIR || `public`
@@ -49,8 +45,6 @@ class Html extends Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <title>Using gatsby-plugin-sass</title>
-          <TypographyStyle typography={typography} />
           {css}
         </head>
         <body>
