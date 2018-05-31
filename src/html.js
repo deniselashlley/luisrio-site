@@ -3,8 +3,8 @@ import React from "react"
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
   try {
-    const buildDirectory = process.env.GATSBY_BUILD_DIR || `public`
-    stylesStr = require(`!raw-loader!../${buildDirectory}/styles.css`)
+    const buildDirectory = process.env.GATSBY_BUILD_DIR || 'public'
+    stylesStr = require('!raw-loader!../${buildDirectory}/styles.css')
   } catch (e) {
     console.log(e)
   }
@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === `production`) {
 export default class HTML extends React.Component {
   render() {
     let css
-    if (process.env.NODE_ENV === `production`) {
+    if (process.env.NODE_ENV === 'production') {
       css = (
         <style
           id="gatsby-inlined-css"
@@ -35,8 +35,6 @@ export default class HTML extends React.Component {
           />
         
           <meta name="msapplication-config" content={`/browserconfig.xml`} />
-          <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" />
-
           {css}
         </head>
         <body {...this.props.bodyAttributes}>
@@ -45,10 +43,6 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
-          />
         </body>
       </html>
     )
