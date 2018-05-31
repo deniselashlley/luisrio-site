@@ -6,6 +6,7 @@ const buildDirectory = process.env.GATSBY_BUILD_DIR || `public`
 if (process.env.NODE_ENV === `production`) {
   try {
     stylesStr = require(`!raw-loader!../${buildDirectory}/styles.css`)
+    console.log(stylesStr)
   } catch (e) {
     console.log(e)
   }
@@ -38,7 +39,7 @@ class Html extends Component {
           <meta charSet="utf-8" />
           <meta
             name="description"
-            content="Gatsby example site demoing sass plugin"
+            content="Luis Rio, jardim, rega, manutenção, piscinas"
           />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta
