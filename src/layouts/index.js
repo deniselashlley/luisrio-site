@@ -15,7 +15,7 @@ const Layout = ({ children, data }) => (
         { name: 'description', content: 'Luis Rio - nature specialist' },
         { name: 'keywords', content: 'Luis Rio, jardim, rega, manutenção, piscinas' },
       ]}
-      link = { rel: 'shortcut icon', type: 'image/x-icon', href:'/favicon.ico'}
+      link = {[{ rel: 'shortcut icon', type: 'image/x-icon', href:'/favicon.ico' }]}
     />
     <main role="main">
       <Header />
