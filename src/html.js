@@ -1,7 +1,7 @@
 import React from "react"
 
 let stylesStr
-if (process.env.NODE_ENV === `production`) {
+if (process.env.NODE_ENV === 'production') {
   try {
     const buildDirectory = process.env.GATSBY_BUILD_DIR || 'public'
     stylesStr = require('!raw-loader!../${buildDirectory}/styles.css')
@@ -34,7 +34,7 @@ export default class HTML extends React.Component {
             content="width=device-width, initial-scale=1.0, viewport-fit=cover"
           />
         
-          <meta name="msapplication-config" content={`/browserconfig.xml`} />
+          <meta name="msapplication-config" content={'/browserconfig.xml'} />
           {css}
         </head>
         <body {...this.props.bodyAttributes}>
